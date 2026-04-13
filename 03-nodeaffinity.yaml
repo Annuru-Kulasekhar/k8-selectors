@@ -10,7 +10,7 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: topoloogy/kubernetes.io/zone
+          - key: topology/kubernetes.io/zone
             operator: In
             values:
             - us-east-1b
