@@ -17,7 +17,7 @@ spec:
             - us-east-1b
             - us-east-1d
       # soft rule
-      prefferedDuringSchedulingIgnoredDuringExecution:
+      preferedDuringSchedulingIgnoredDuringExecution:
       - weight: 100
         preference:
           matchExpressions:
@@ -29,7 +29,7 @@ spec:
         preference:
           matchExpressions:
           - key: project
-            ooperator: In
+            operator: In
             values:
             - flipkart
   containers:
