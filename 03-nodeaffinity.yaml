@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: nginx-affinity
+  labels:
+    env: test
+spec:
+  affinity:
+    nodeaffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topoloogy/kubernetes.io/zone
+            operator: In
+            values:
+            - us-east-1b
+  containers:
+  - name: nginx
+    image: nginx
