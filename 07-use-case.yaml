@@ -21,7 +21,7 @@ spec:
                 operator: In
                 values:
                 - store
-            topologyKey: topology.kubernetes.io/zone
+            topologyKey: "topology.kubernetes.io/hostname"
       containers:
       - name: redis-server
         image: redis:3.2-alpine
