@@ -25,7 +25,6 @@ spec:
             operator: In
             values:
             - backend
-
   containers:
   - name: nginx
     image: nginx
