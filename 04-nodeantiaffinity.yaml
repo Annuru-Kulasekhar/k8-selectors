@@ -11,9 +11,13 @@ spec:
         nodeSelectorTerms:
         - matchExpressions:
           - key: topology.kubernetes.io/zone
-            operator: NotIn
+            operator: In
             values:
             - us-east-1d
+          - key: topology.kubernetes.io/zone
+            operator: NotIn
+            values:
+            - flipkart
   containers:
   - name: nginx
     image: nginx
